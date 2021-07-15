@@ -5,5 +5,5 @@ Lớp: 0503149.1
 
 -----------------------------------
 Cấu trúc repo:
-+ directory module4-btmanguonmo -- bao gồm các bài tập trong module tương ứng với các project theo bài
++ directory module4-btmanguonmo -- bao gồm các bài tập trong module tương ứng với các project theo bài.
 + NguyenXuanAnh-2017605144_0503149.1_baithuchanhchuong3.docx -- Bản word lưu hình ảnh chương trình và code các hàm xử lý.

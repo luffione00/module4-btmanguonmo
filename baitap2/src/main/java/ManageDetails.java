@@ -84,7 +84,7 @@ public class ManageDetails extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        mahd = new javax.swing.JTextField();
+        mahdd = new javax.swing.JTextField();
         manvhd = new javax.swing.JTextField();
         ngaygiao = new javax.swing.JTextField();
         type = new javax.swing.JTextField();
@@ -94,6 +94,18 @@ public class ManageDetails extends javax.swing.JFrame {
         suahd = new javax.swing.JButton();
         xoahd = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        nextstep = new javax.swing.JButton();
+        detail = new javax.swing.JFrame();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        maspdt = new javax.swing.JTextField();
+        sl = new javax.swing.JTextField();
+        mahdlb = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -463,13 +475,30 @@ public class ManageDetails extends javax.swing.JFrame {
 
         suahd.setText("Sua");
         suahd.setToolTipText("");
+        suahd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suahdActionPerformed(evt);
+            }
+        });
 
         xoahd.setText("Xoa");
+        xoahd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xoahdActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("Back");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
+            }
+        });
+
+        nextstep.setText("Chi Tiet");
+        nextstep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextstepActionPerformed(evt);
             }
         });
 
@@ -484,10 +513,6 @@ public class ManageDetails extends javax.swing.JFrame {
             .addGroup(frameHDLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(frameHDLayout.createSequentialGroup()
-                        .addComponent(themhd)
-                        .addGap(73, 73, 73)
-                        .addComponent(suahd))
                     .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel13)
                         .addGroup(frameHDLayout.createSequentialGroup()
@@ -500,7 +525,13 @@ public class ManageDetails extends javax.swing.JFrame {
                                 .addComponent(ngaylap)
                                 .addComponent(type)
                                 .addComponent(description)
-                                .addComponent(mahd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(mahdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(nextstep)
+                        .addGroup(frameHDLayout.createSequentialGroup()
+                            .addComponent(themhd)
+                            .addGap(73, 73, 73)
+                            .addComponent(suahd))))
                 .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frameHDLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
@@ -528,7 +559,7 @@ public class ManageDetails extends javax.swing.JFrame {
                 .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jLabel14)
-                    .addComponent(mahd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mahdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(manvhd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -550,8 +581,106 @@ public class ManageDetails extends javax.swing.JFrame {
                     .addComponent(suahd)
                     .addComponent(xoahd)
                     .addComponent(jButton9))
-                .addGap(40, 40, 40)
+                .addGap(11, 11, 11)
+                .addComponent(nextstep)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        detail.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                detailWindowOpened(evt);
+            }
+        });
+
+        jLabel19.setText("Ma Hoa Don");
+
+        jLabel20.setText("Ma San Pham");
+
+        jLabel21.setText("So Luong");
+
+        mahdlb.setText("<>");
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Ma Hoa Don", "Ten San Pham", "So Luong", "Thanh Tien"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
+        jButton4.setText("Them");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Back");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout detailLayout = new javax.swing.GroupLayout(detail.getContentPane());
+        detail.getContentPane().setLayout(detailLayout);
+        detailLayout.setHorizontalGroup(
+            detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(detailLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4)
+                .addContainerGap())
+            .addGroup(detailLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel19))
+                .addGap(18, 18, 18)
+                .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(detailLayout.createSequentialGroup()
+                        .addComponent(mahdlb)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(detailLayout.createSequentialGroup()
+                        .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, detailLayout.createSequentialGroup()
+                                .addComponent(maspdt, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, detailLayout.createSequentialGroup()
+                                .addComponent(jButton4)
+                                .addGap(101, 101, 101)))
+                        .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton5)
+                            .addComponent(sl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(121, 121, 121))))
+        );
+        detailLayout.setVerticalGroup(
+            detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(detailLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(mahdlb))
+                .addGap(51, 51, 51)
+                .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel21)
+                    .addComponent(maspdt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                .addGroup(detailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5))
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -748,9 +877,11 @@ public class ManageDetails extends javax.swing.JFrame {
                     this.gioitinh.setText(rs.getString("gioitinh"));
                 }
             }
+            con.close();       
         }catch (ClassNotFoundException | SQLException ex){
             Logger.getLogger(ManageDetails.class.getName()).log(Level.SEVERE,null,ex);
         }
+       
     }//GEN-LAST:event_xemnvActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -915,7 +1046,7 @@ public class ManageDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_typeActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        this.mahd.setText(null);
+        this.mahdd.setText(null);
         this.manvhd.setText(null);
         this.ngaylap.setText(null);
         this.ngaygiao.setText(null);
@@ -926,6 +1057,42 @@ public class ManageDetails extends javax.swing.JFrame {
 
     private void themhdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themhdActionPerformed
         
+        Connection con=null;
+        String f1,f2,f3,f4,f5,f6;
+        f1=this.mahdd.getText();
+        f2=this.manvhd.getText();
+        f3=this.type.getText();
+        f4=this.ngaylap.getText();
+        f5=this.ngaygiao.getText();
+        f6=this.description.getText();
+        
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            Statement stmt=con.createStatement();
+
+        if(con!=null) {
+            System.out.println("Success!");
+        }
+        else {
+            System.out.println("Failed!");
+        }
+
+        String sql = "Insert into anhnx.hoadon values('"+f1+"','"+f2+"','"+f3+"',to_date('"+f4+"','dd/mm/yyyy'),to_date('"+f5+"','dd/mm/yyyy'),'"+f6+"')";
+        Statement st=con.createStatement();
+        int n=st.executeUpdate(sql);
+        //System.out.println(n+" "+"record inserted");
+        if (n==1) {
+            jOptionPane1.showMessageDialog(this,"Inserted");
+        }
+        else {
+            jOptionPane1.showMessageDialog(this,"Insert failed");
+        }
+        
+        con.close();
+
+    } catch(Exception e) {System.out.println(e);
+        }
     }//GEN-LAST:event_themhdActionPerformed
 
     private void frameHDWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_frameHDWindowOpened
@@ -958,6 +1125,139 @@ public class ManageDetails extends javax.swing.JFrame {
         frameHD.pack();
         frameHD.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void detailWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_detailWindowOpened
+        
+        Connection con=null;
+        String vl=mahdd.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            if(con!=null){
+                Statement state=con.createStatement();
+                ResultSet rs=state.executeQuery("select dt.mahd, sp.tensp tensp, dt.soluong soluong, TO_CHAR((dt.soluong*sp.gia),'99999999','NLS_NUMERIC_CHARACTERS = ''.''''''NLS_CURRENCY = ''$'' ') thanhtien from chitiethoadon dt, sanphamm sp where 1=1 and dt.masp=sp.masp and mahd='"+vl+"'");
+                int i=0;
+                while(rs.next()){
+                    jTable4.getModel().setValueAt(rs.getString("mahd"),i,0);
+                    jTable4.getModel().setValueAt(rs.getString("tensp"), i,1);
+                    jTable4.getModel().setValueAt(rs.getString("soluong"),i,2);
+                    jTable4.getModel().setValueAt(rs.getString("thanhtien"),i,3);
+                    i++;
+                }
+            }
+        }catch (ClassNotFoundException | SQLException ex){
+            Logger.getLogger(ManageDetails.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }//GEN-LAST:event_detailWindowOpened
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String f1,f2,f3;
+        f1=this.mahdlb.getText();
+        f2=this.maspdt.getText();
+        f3=this.sl.getText();
+        Connection con=null;
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            Statement stmt=con.createStatement();
+
+        if(con!=null) {
+            System.out.println("Success!");
+        }
+        else {
+            System.out.println("Failed!");
+        }
+
+        String sql = "Insert into anhnx.chitiethoadon values('"+f1+"','"+f2+"','"+f3+"')";
+        Statement st=con.createStatement();
+        int n=st.executeUpdate(sql);
+        //System.out.println(n+" "+"record inserted");
+
+        if (n==1) {
+            jOptionPane1.showMessageDialog(this,"Record inserted");
+        }
+        else {
+            jOptionPane1.showMessageDialog(this,"Record not inserted");
+        }       
+        con.close();
+
+    } catch(Exception e) {System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void nextstepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextstepActionPerformed
+        String f1=mahdd.getText();
+        this.mahdlb.setText(f1);
+        frameHD.setVisible(false);
+        detail.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        detail.pack();
+        detail.setVisible(true);
+    }//GEN-LAST:event_nextstepActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.mahdlb.setText(null);
+        this.maspdt.setText(null);
+        this.sl.setText(null);
+       
+        detail.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void suahdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suahdActionPerformed
+        Connection con=null;
+        String f1,f2,f3,f4,f5,f6;
+        f1=this.mahdd.getText();
+        f2=this.manvhd.getText();
+        f3=this.type.getText();
+        f4=this.ngaylap.getText();
+        f5=this.ngaygiao.getText();
+        f6=this.description.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            Statement stmt=con.createStatement();
+        String sql = "update anhnx.hoadon  set manv='"+f2+"', type='"+f3+"', ngaylap=to_date('"+f4+"','dd/mm/yyyy'), ngaygiao=to_date('"+f5+"','dd/mm/yyyy'), description='"+f6+"' where mahd='"+f1+"'";
+        Statement st=con.createStatement();
+        int n=st.executeUpdate(sql);
+        //System.out.println(n+" "+"record inserted");
+
+        if (n==1) {
+            jOptionPane1.showMessageDialog(this,"Updated");
+        }
+        else {
+            jOptionPane1.showMessageDialog(this,"Update error");
+        }
+
+        con.close();
+
+    } catch(Exception e) {System.out.println(e);
+        }
+    }//GEN-LAST:event_suahdActionPerformed
+
+    private void xoahdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoahdActionPerformed
+        Connection con=null;
+        String f1;
+        f1=this.mahdd.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            Statement stmt=con.createStatement();
+        String sql = "delete from anhnx.hoadon where mahd='"+f1+"'";
+        Statement st=con.createStatement();
+        int n=st.executeUpdate(sql);
+        //System.out.println(n+" "+"record inserted");
+
+        if (n==1) {
+            jOptionPane1.showMessageDialog(this,"Removed");
+        }
+        else {
+            jOptionPane1.showMessageDialog(this,"Remove failed");
+        }
+
+        con.close();
+
+    } catch(Exception e) {System.out.println(e);
+        }
+    }//GEN-LAST:event_xoahdActionPerformed
     
     /**
      * @param args the command line arguments
@@ -996,6 +1296,7 @@ public class ManageDetails extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField description;
+    private javax.swing.JFrame detail;
     private javax.swing.JTextField diachi;
     private javax.swing.JTextField donvi;
     private javax.swing.JFrame frameHD;
@@ -1007,6 +1308,8 @@ public class ManageDetails extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -1020,7 +1323,10 @@ public class ManageDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1032,17 +1338,23 @@ public class ManageDetails extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTextField mahd;
+    private javax.swing.JTable jTable4;
+    public static javax.swing.JTextField mahdd;
+    private javax.swing.JLabel mahdlb;
     private javax.swing.JTextField manv;
     private javax.swing.JTextField manvhd;
     private javax.swing.JTextField masp;
+    private javax.swing.JTextField maspdt;
+    private javax.swing.JButton nextstep;
     private javax.swing.JTextField ngaygiao;
     private javax.swing.JTextField ngaylap;
     private javax.swing.JTextField ngaysinh;
     private javax.swing.JTextField sdt;
+    private javax.swing.JTextField sl;
     private javax.swing.JButton suahd;
     private javax.swing.JButton suasp;
     private javax.swing.JTextField tennv;

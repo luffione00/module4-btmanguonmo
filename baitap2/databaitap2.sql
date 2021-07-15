@@ -53,6 +53,7 @@ insert into hoadon (mahd, manv, type, ngaylap, ngaygiao, description) values ('H
 insert into hoadon (mahd, manv, type, ngaylap, ngaygiao, description) values ('HD013','514','Re-Order',to_date('01/02/2020','dd/mm/yyyy'),to_date('19/02/2021','dd/mm/yyyy'),'');
 insert into hoadon (mahd, manv, type, ngaylap, ngaygiao, description) values ('HD014','420','Import',to_date('10/11/2020','dd/mm/yyyy'),to_date('19/01/2021','dd/mm/yyyy'),'');
 select *from hoadon;
+delete from hoadon where mahd='HD050';
 insert into chitiethoadon (mahd, masp, soluong) values ('HD010','SM001',100);
 insert into chitiethoadon (mahd, masp, soluong) values ('HD010','SM002',100);
 insert into chitiethoadon (mahd, masp, soluong) values ('HD014','SM001',100);
@@ -68,3 +69,5 @@ insert into chitiethoadon (mahd, masp, soluong) values ('HD013','SM001',100);
 insert into chitiethoadon (mahd, masp, soluong) values ('HD013','DL002',100);
 select *from chitiethoadon;
 
+commit;
+select mahd dt, tensp sp, soluong dt, TO_CHAR((dt.soluong*sp.gia),'99999999','NLS_NUMERIC_CHARACTERS = ''.''''''NLS_CURRENCY = ''$'' ') from chitiethoadon dt, sanphamm sp where 1=1 and dt.masp=sp.masp;

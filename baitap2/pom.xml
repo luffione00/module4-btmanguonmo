@@ -5,9 +5,18 @@
     <artifactId>baitap2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+    <dependencies>
+<dependency>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc7</artifactId>
+    <version>12.1.0.2</version>
+</dependency>
+    </dependencies>
+<repositories>
+    <repository>
+        <id>hand-china-repo</id>
+        <name>HandChinaRepo</name>
+        <url>http://nexus.saas.hand-china.com/content/repositories/rdc/</url>
+    </repository>
+</repositories>
 </project>

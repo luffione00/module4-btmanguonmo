@@ -107,8 +107,6 @@ public class ManageProduct extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        loaisptxt.setText("jTextField4");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -188,23 +186,19 @@ public class ManageProduct extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         Connection con=null;
-        String f1,f2,f3,f4;
-        f1=this.masptxt.getText();
-        f2=this.tensptxt.getText();
-        f3=this.loaisptxt.getText();
-        f4=this.nsxtxt.getText();
+       
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
             if(con!=null){
                 Statement state=con.createStatement();
-                ResultSet rs=state.executeQuery("select *from anhnx.SanPham");
+                ResultSet rs=state.executeQuery("select masp,tensp,nhasanxuat,tenloaisp from anhnx.SanPham s, anhnx.LoaiSP c where 1=1 and s.maloaisp=c.maloaisp ");
                 int i=0;
                 while(rs.next()){
                     jTable1.getModel().setValueAt(rs.getString("masp"),i,0);
                     jTable1.getModel().setValueAt(rs.getString("tensp"), i, 1);
                     jTable1.getModel().setValueAt(rs.getString("nhasanxuat"),i,2);
-                    jTable1.getModel().setValueAt(rs.getString("maloaisp"),i,3);
+                    jTable1.getModel().setValueAt(rs.getString("tenloaisp"),i,3);
                     i++;
                 }
             }

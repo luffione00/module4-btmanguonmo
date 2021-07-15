@@ -19,3 +19,10 @@ insert into LoaiSP values(103, 'Laptop');
 insert into LoaiSP values(104, 'Headphone');
 insert into LoaiSP values(105, 'Micro');
 select *from LoaiSP;
+
+insert into SanPham values('P100','SamsungJ2','SamSung',101);
+insert into SanPham values('P501','IPhone 12','Apple',101);
+insert into SanPham values('P102','SamsungNote10','SamSung',101);
+commit;
+
+select *from SanPham where masp='P100';

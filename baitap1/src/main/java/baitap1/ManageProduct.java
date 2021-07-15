@@ -79,6 +79,11 @@ public class ManageProduct extends javax.swing.JFrame {
         });
 
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Save");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -207,6 +212,32 @@ public class ManageProduct extends javax.swing.JFrame {
             Logger.getLogger(ManageProduct.class.getName()).log(Level.SEVERE,null,ex);
         }
     }//GEN-LAST:event_formWindowOpened
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            Connection con=null;
+        String f1,f2,f3,f4;
+        f1=this.masptxt.getText();
+        f2=this.tensptxt.getText();
+        f3=this.loaisptxt.getText();
+        f4=this.nsxtxt.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            if(con!=null){
+                Statement state=con.createStatement();
+                ResultSet rs=state.executeQuery("select *from anhnx.SanPham where 1=1 and masp='"+f1+"'or masp='"+f2+"' or masp='"+f3+"' or masp='"+f4+"'");
+                int i=0;
+                while(rs.next()){
+                    this.masptxt.setText(rs.getString("masp")+"");
+                    this.tensptxt.setText(rs.getString("tensp"));
+                    this.nsxtxt.setText(rs.getString("nhasanxuat"));
+                    this.loaisptxt.setText(rs.getString("maloaisp"));
+                }
+            }
+        }catch (ClassNotFoundException | SQLException ex){
+            Logger.getLogger(ManageProduct.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

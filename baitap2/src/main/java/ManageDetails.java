@@ -53,13 +53,47 @@ public class ManageDetails extends javax.swing.JFrame {
         diachi = new javax.swing.JTextField();
         sdt = new javax.swing.JTextField();
         gioitinh = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        xemnv = new javax.swing.JButton();
+        themnv = new javax.swing.JButton();
+        xoanv = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
         jOptionPane1 = new javax.swing.JOptionPane();
+        frameSP = new javax.swing.JFrame();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        masp = new javax.swing.JTextField();
+        tensp = new javax.swing.JTextField();
+        donvi = new javax.swing.JTextField();
+        gia = new javax.swing.JTextField();
+        xemsp = new javax.swing.JButton();
+        suasp = new javax.swing.JButton();
+        xoasp = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        frameHD = new javax.swing.JFrame();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        mahd = new javax.swing.JTextField();
+        manvhd = new javax.swing.JTextField();
+        ngaygiao = new javax.swing.JTextField();
+        type = new javax.swing.JTextField();
+        ngaylap = new javax.swing.JTextField();
+        description = new javax.swing.JTextField();
+        themhd = new javax.swing.JButton();
+        suahd = new javax.swing.JButton();
+        xoahd = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -114,28 +148,28 @@ public class ManageDetails extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Search");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        xemnv.setText("Search");
+        xemnv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                xemnvActionPerformed(evt);
             }
         });
 
-        jButton5.setText("New...");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        themnv.setText("New...");
+        themnv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                themnvActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Remove");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        xoanv.setText("Remove");
+        xoanv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                xoanvActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Exit");
+        jButton7.setText("Back");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -184,16 +218,15 @@ public class ManageDetails extends javax.swing.JFrame {
                                 .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(sdt)
                                     .addComponent(gioitinh))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameNVLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameNVLayout.createSequentialGroup()
                                         .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jButton5)
-                                            .addComponent(jButton4)
-                                            .addComponent(jButton6))
+                                            .addComponent(themnv)
+                                            .addComponent(xemnv)
+                                            .addComponent(xoanv))
                                         .addGap(58, 58, 58))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameNVLayout.createSequentialGroup()
                                         .addComponent(jButton7)
@@ -211,7 +244,7 @@ public class ManageDetails extends javax.swing.JFrame {
                 .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(manv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
+                    .addComponent(xemnv))
                 .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frameNVLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -220,7 +253,7 @@ public class ManageDetails extends javax.swing.JFrame {
                             .addComponent(tennv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(frameNVLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton5)))
+                        .addComponent(themnv)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -234,7 +267,7 @@ public class ManageDetails extends javax.swing.JFrame {
                             .addComponent(diachi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(frameNVLayout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(jButton6)))
+                        .addComponent(xoanv)))
                 .addGap(18, 18, 18)
                 .addGroup(frameNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -250,6 +283,278 @@ public class ManageDetails extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        frameSP.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                frameSPWindowOpened(evt);
+            }
+        });
+
+        jLabel9.setText("Ma San Pham");
+
+        jLabel10.setText("Ten San Pham");
+
+        jLabel11.setText("Don Vi");
+
+        jLabel12.setText("Gia");
+
+        xemsp.setText("Xem");
+        xemsp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xemspActionPerformed(evt);
+            }
+        });
+
+        suasp.setText("Sua");
+        suasp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suaspActionPerformed(evt);
+            }
+        });
+
+        xoasp.setText("Xoa");
+        xoasp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xoaspActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Back");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Ma San Pham", "Ten San Pham", "Don Vi", "Gia"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout frameSPLayout = new javax.swing.GroupLayout(frameSP.getContentPane());
+        frameSP.getContentPane().setLayout(frameSPLayout);
+        frameSPLayout.setHorizontalGroup(
+            frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameSPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameSPLayout.createSequentialGroup()
+                        .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(gia)
+                            .addComponent(donvi)
+                            .addComponent(tensp)
+                            .addComponent(masp, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                        .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(frameSPLayout.createSequentialGroup()
+                                        .addGap(21, 21, 21)
+                                        .addComponent(xemsp))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSPLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(suasp)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSPLayout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(xoasp)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSPLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton12))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameSPLayout.createSequentialGroup()
+                        .addGap(0, 5, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        frameSPLayout.setVerticalGroup(
+            frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameSPLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(masp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xemsp))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(tensp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suasp))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(donvi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xoasp))
+                .addGap(18, 18, 18)
+                .addGroup(frameSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(gia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton12))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        frameHD.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                frameHDWindowOpened(evt);
+            }
+        });
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Ma Hoa Don", "Ma Nhan Vien", "Loai Hoa Don", "Ngay Lap", "Ngay Giao", "Chu Thich"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        jLabel13.setText("Ma Hoa Don");
+
+        jLabel14.setText("Ma Nhan Vien");
+
+        jLabel15.setText("Loai Hoa Don");
+
+        jLabel16.setText("Ngay Lap");
+
+        jLabel17.setText("Ngay Kiem Hang");
+
+        jLabel18.setText("Chu Thich");
+
+        type.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeActionPerformed(evt);
+            }
+        });
+
+        themhd.setText("Them");
+        themhd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                themhdActionPerformed(evt);
+            }
+        });
+
+        suahd.setText("Sua");
+        suahd.setToolTipText("");
+
+        xoahd.setText("Xoa");
+
+        jButton9.setText("Back");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout frameHDLayout = new javax.swing.GroupLayout(frameHD.getContentPane());
+        frameHD.getContentPane().setLayout(frameHDLayout);
+        frameHDLayout.setHorizontalGroup(
+            frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameHDLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3)
+                .addContainerGap())
+            .addGroup(frameHDLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(frameHDLayout.createSequentialGroup()
+                        .addComponent(themhd)
+                        .addGap(73, 73, 73)
+                        .addComponent(suahd))
+                    .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel13)
+                        .addGroup(frameHDLayout.createSequentialGroup()
+                            .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel15)
+                                .addComponent(jLabel16)
+                                .addComponent(jLabel18))
+                            .addGap(18, 18, 18)
+                            .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ngaylap)
+                                .addComponent(type)
+                                .addComponent(description)
+                                .addComponent(mahd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(frameHDLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
+                        .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(frameHDLayout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(18, 18, 18)
+                                .addComponent(manvhd, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(frameHDLayout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton9)
+                                    .addComponent(ngaygiao))))
+                        .addGap(234, 234, 234))
+                    .addGroup(frameHDLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(xoahd)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        frameHDLayout.setVerticalGroup(
+            frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameHDLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14)
+                    .addComponent(mahd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(manvhd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17)
+                    .addComponent(ngaygiao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ngaylap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(description, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGroup(frameHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(themhd)
+                    .addComponent(suahd)
+                    .addComponent(xoahd)
+                    .addComponent(jButton9))
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Administrator");
@@ -262,8 +567,18 @@ public class ManageDetails extends javax.swing.JFrame {
         });
 
         jButton2.setText("San Pham");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Hoa Don");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -337,7 +652,7 @@ public class ManageDetails extends javax.swing.JFrame {
         frameNV.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void themnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themnvActionPerformed
             Connection con=null;
         String f1,f2,f3,f4,f5,f6;
         f1=this.manv.getText();
@@ -374,9 +689,9 @@ public class ManageDetails extends javax.swing.JFrame {
 
     } catch(Exception e) {System.out.println(e);
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_themnvActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void xoanvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoanvActionPerformed
         Connection con=null;
         String f1,f2;
         f1=this.manv.getText();
@@ -409,9 +724,9 @@ public class ManageDetails extends javax.swing.JFrame {
 
     } catch(Exception e) {System.out.println(e);
         }
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_xoanvActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void xemnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xemnvActionPerformed
      
         Connection con=null;
         String f1,f2;
@@ -422,22 +737,21 @@ public class ManageDetails extends javax.swing.JFrame {
             con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
             if(con!=null){
                 Statement state=con.createStatement();
-                ResultSet rs=state.executeQuery("select *from anhnx.nhanvien where 1=1 and manv='"+f1+"'");
+                ResultSet rs=state.executeQuery("select manv, tennv, to_char(ngaysinh,'dd/mm/yyyy') ngaysinh, diachi, sdt, gioitinh from anhnx.nhanvien where 1=1 and manv='"+f1+"'");
                 int i=0;
                 while(rs.next()){
-                    jTable1.getModel().setValueAt(rs.getString("manv"),i,0);
-                    jTable1.getModel().setValueAt(rs.getString("tennv"), i, 1);
-                    jTable1.getModel().setValueAt(rs.getString("ngaysinh"),i,2);
-                    jTable1.getModel().setValueAt(rs.getString("diachi"),i,3);
-                    jTable1.getModel().setValueAt(rs.getString("sdt"),i,4);
-                    jTable1.getModel().setValueAt(rs.getString("gioitinh"),i,5);
-                   
+                    this.manv.setText(rs.getString("manv")+"");
+                    this.tennv.setText(rs.getString("tennv"));
+                    this.ngaysinh.setText(rs.getString("ngaysinh"));
+                    this.diachi.setText(rs.getString("diachi"));
+                    this.sdt.setText(rs.getString("sdt"));
+                    this.gioitinh.setText(rs.getString("gioitinh"));
                 }
             }
         }catch (ClassNotFoundException | SQLException ex){
             Logger.getLogger(ManageDetails.class.getName()).log(Level.SEVERE,null,ex);
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_xemnvActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         this.manv.setText(null);
@@ -471,8 +785,179 @@ public class ManageDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-               frameNV.setVisible(false);
+         this.manv.setText(null);
+        this.tennv.setText(null);
+        this.ngaysinh.setText(null);
+        this.diachi.setText(null);
+        this.sdt.setText(null);
+        this.gioitinh.setText(null);      
+        frameNV.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void xemspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xemspActionPerformed
+        Connection con=null;
+        String f1,f2;
+        f1=this.masp.getText();
+        f2=this.tensp.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            if(con!=null){
+                Statement state=con.createStatement();
+                ResultSet rs=state.executeQuery("select* from anhnx.sanphamm where 1=1 and masp='"+f1+"'");
+                int i=0;
+                while(rs.next()){
+                    this.masp.setText(rs.getString("masp")+"");
+                    this.tensp.setText(rs.getString("tensp"));
+                    this.donvi.setText(rs.getString("donvi"));
+                    this.gia.setText(rs.getString("gia"));
+                }
+            }
+        }catch (ClassNotFoundException | SQLException ex){
+            Logger.getLogger(ManageDetails.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }//GEN-LAST:event_xemspActionPerformed
+
+    private void frameSPWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_frameSPWindowOpened
+            Connection con=null;
+       
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            if(con!=null){
+                Statement state=con.createStatement();
+                ResultSet rs=state.executeQuery("select masp, tensp, donvi, gia from anhnx.sanphamm");
+                int i=0;
+                while(rs.next()){
+                    jTable2.getModel().setValueAt(rs.getString("masp"),i,0);
+                    jTable2.getModel().setValueAt(rs.getString("tensp"), i,1);
+                    jTable2.getModel().setValueAt(rs.getString("donvi"),i,2);
+                    jTable2.getModel().setValueAt(rs.getString("gia"),i,3);
+                    i++;
+                }
+            }
+        }catch (ClassNotFoundException | SQLException ex){
+            Logger.getLogger(ManageDetails.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }//GEN-LAST:event_frameSPWindowOpened
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        this.masp.setText(null);
+        this.tensp.setText(null);
+        this.donvi.setText(null);
+        this.gia.setText(null);
+        frameSP.setVisible(false);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        frameSP.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frameSP.pack();
+        frameSP.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void suaspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suaspActionPerformed
+        Connection con=null;
+        String f1,f2,f3,f4;
+        f1=this.masp.getText();
+        f2=this.tensp.getText();
+        f3=this.donvi.getText();
+        f4=this.gia.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            Statement stmt=con.createStatement();
+        String sql = "update anhnx.sanphamm  set tensp='"+f2+"', donvi='"+f3+"', gia='"+f4+"' where masp='"+f1+"'";
+        Statement st=con.createStatement();
+        int n=st.executeUpdate(sql);
+        //System.out.println(n+" "+"record inserted");
+
+        if (n==1) {
+            jOptionPane1.showMessageDialog(this,"Updated");
+        }
+        else {
+            jOptionPane1.showMessageDialog(this,"Update error");
+        }
+
+        con.close();
+
+    } catch(Exception e) {System.out.println(e);
+        }
+    }//GEN-LAST:event_suaspActionPerformed
+
+    private void xoaspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaspActionPerformed
+        Connection con=null;
+        String f1;
+        f1=this.masp.getText();
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            Statement stmt=con.createStatement();
+        String sql = "delete from anhnx.sanphamm where masp='"+f1+"'";
+        Statement st=con.createStatement();
+        int n=st.executeUpdate(sql);
+        //System.out.println(n+" "+"record inserted");
+
+        if (n==1) {
+            jOptionPane1.showMessageDialog(this,"Removed");
+        }
+        else {
+            jOptionPane1.showMessageDialog(this,"Remove failed");
+        }
+
+        con.close();
+
+    } catch(Exception e) {System.out.println(e);
+        }
+    }//GEN-LAST:event_xoaspActionPerformed
+
+    private void typeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_typeActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        this.mahd.setText(null);
+        this.manvhd.setText(null);
+        this.ngaylap.setText(null);
+        this.ngaygiao.setText(null);
+        this.type.setText(null);
+        this.description.setText(null);
+        frameHD.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void themhdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themhdActionPerformed
+        
+    }//GEN-LAST:event_themhdActionPerformed
+
+    private void frameHDWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_frameHDWindowOpened
+        Connection con=null;
+       
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
+            if(con!=null){
+                Statement state=con.createStatement();
+                ResultSet rs=state.executeQuery("select mahd, manv, type, ngaylap, ngaygiao, description from anhnx.hoadon");
+                int i=0;
+                while(rs.next()){
+                    jTable3.getModel().setValueAt(rs.getString("mahd"),i,0);
+                    jTable3.getModel().setValueAt(rs.getString("manv"), i,1);
+                    jTable3.getModel().setValueAt(rs.getString("type"),i,2);
+                    jTable3.getModel().setValueAt(rs.getString("ngaylap"),i,3);
+                    jTable3.getModel().setValueAt(rs.getString("ngaygiao"),i,4);
+                    jTable3.getModel().setValueAt(rs.getString("description"),i,5);
+                    i++;
+                }
+            }
+        }catch (ClassNotFoundException | SQLException ex){
+            Logger.getLogger(ManageDetails.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }//GEN-LAST:event_frameHDWindowOpened
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    frameHD.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frameHD.pack();
+        frameHD.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -510,18 +995,31 @@ public class ManageDetails extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField description;
     private javax.swing.JTextField diachi;
+    private javax.swing.JTextField donvi;
+    private javax.swing.JFrame frameHD;
     private javax.swing.JFrame frameNV;
+    private javax.swing.JFrame frameSP;
+    private javax.swing.JTextField gia;
     private javax.swing.JTextField gioitinh;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -529,12 +1027,33 @@ public class ManageDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTextField mahd;
     private javax.swing.JTextField manv;
+    private javax.swing.JTextField manvhd;
+    private javax.swing.JTextField masp;
+    private javax.swing.JTextField ngaygiao;
+    private javax.swing.JTextField ngaylap;
     private javax.swing.JTextField ngaysinh;
     private javax.swing.JTextField sdt;
+    private javax.swing.JButton suahd;
+    private javax.swing.JButton suasp;
     private javax.swing.JTextField tennv;
+    private javax.swing.JTextField tensp;
+    private javax.swing.JButton themhd;
+    private javax.swing.JButton themnv;
+    private javax.swing.JTextField type;
+    private javax.swing.JButton xemnv;
+    private javax.swing.JButton xemsp;
+    private javax.swing.JButton xoahd;
+    private javax.swing.JButton xoanv;
+    private javax.swing.JButton xoasp;
     // End of variables declaration//GEN-END:variables
 }

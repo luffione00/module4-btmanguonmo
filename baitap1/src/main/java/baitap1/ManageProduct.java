@@ -190,7 +190,7 @@ public class ManageProduct extends javax.swing.JFrame {
         f4=this.nsxtxt.getText();
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            con=DriverManager.getConnection("jdbc:oracle:thin://192.168.1.111:1521/PDB1","anhnx","3872335");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@//192.168.1.111:1521/PDB1","anhnx","3872335");
             if(con!=null){
                 Statement state=con.createStatement();
                 ResultSet rs=state.executeQuery("select *from anhnx.SanPham");
